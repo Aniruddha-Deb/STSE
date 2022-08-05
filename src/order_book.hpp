@@ -24,7 +24,14 @@ class OrderBook {
 
 public:
 
-    void place_buy_order(double price, uint32_t volume, Agent& owner);
-    void place_sell_order(double price, uint32_t volume, Agent& owner);
+    void place_buy_order(double price, uint32_t volume, Agent& buyer);
+    void place_sell_order(double price, uint32_t volume, Agent& seller);
     void place_buy_sell_order(double buy, double sell, uint32_t buy_vol, uint32_t sell_vol, Agent& owner);
+    void fill_buy_order(uint64_t order_id, Agent& seller);
+    void fill_sell_order(uint64_t order_id, Agent& buyer);
+    void fill_buy_order(uint64_t order_id, uint64_t volume, Agent& seller);
+    void fill_sell_order(uint64_t order_id, uint64_t volume, Agent& buyer);
+    Order& get_best_buy_order();
+    Order& get_best_sell_order();
+
 };
