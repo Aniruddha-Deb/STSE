@@ -5,7 +5,7 @@ RM=rm
 SRC := src/main.cpp
 OBJ := $(patsubst src/%.cpp, obj/%.o, $(SRC))
 DEP := $(patsubst src/%.cpp, obj/%.d, $(SRC))
-BIN := bin/nimitz
+BIN := bin/stse
 
 INC := -I./include/
 
